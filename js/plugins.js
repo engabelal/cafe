@@ -1,0 +1,3 @@
+$(function(){'use strict';function checkScroll(){var startY=$('.navbar').height()*2;if($(window).scrollTop()>=startY){$('.navbar').addClass("scrolled").removeClass('bg-light');}else{$('.navbar').removeClass("scrolled").addClass('bg-light');}}
+if($('.navbar').length>0){$(window).on("scroll load resize",function(){checkScroll();});}
+$('#Container').mixItUp();$('.tabs li').click(function(){$(this).addClass('selected').siblings().removeClass('selected');});window.load=function(){$("body").css("overflow","auto");$(".loading .flower-spinner").fadeOut(1500,function(){$(this).parent().fadeOut(1000,function(){$(this).remove();});});}();})
